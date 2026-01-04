@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OnePageLearn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>📘 OnePageLearn</h1>
+  <p>School → College → Interview</p>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <h3>Topics</h3>
+    <div id="topicsContainer"></div>
+  </aside>
+
+  <main class="content">
+
+    <div class="level-switch">
+      <button class="active" onclick="setLevel('school', this)">School</button>
+      <button onclick="setLevel('college', this)">College</button>
+      <button onclick="setLevel('interview', this)">Interview</button>
+    </div>
+
+    <h2 id="title">Select a topic</h2>
+    <p id="intro"></p>
+
+    <h3>Key Points</h3>
+    <ul id="explain"></ul>
+
+    <h3>Flowchart</h3>
+    <pre id="flowchart" class="flowchart"></pre>
+
+    <h3>Quiz</h3>
+    <div id="questions"></div>
+    <button onclick="submitQuiz()">Submit Quiz</button>
+
+    <div id="result"></div>
+    <button id="nextBtn" onclick="nextTopic()" style="display:none;">Next Topic ➡️</button>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
